@@ -1,0 +1,19 @@
+{% extends 'paginas/modelo.html'%}
+{% load static %}
+
+{% block conteudo%}
+<h2 class="mt-4 mb-4 border-bottom pb-2">
+    Cadastros
+</h2>
+
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-success">
+        Cadastrar
+    </button>
+</form>
+{% endblock %}
