@@ -1,0 +1,36 @@
+{% extends 'paginas/modelo.html'%}
+{% load static %}
+
+{% block conteudo%}
+<h3>Lista de Produtos cadastrados</h3>
+<a href="{% url 'cadastrar-Produto'%}" class="btn btn-primary btn-sm">Adicionar Produto</a>
+<div class="table-responsive">
+
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Nascimento</th>
+            <th>Opções</th>
+        </tr>
+        {% for estado in object_list %}
+        <tr>
+            <td>{{Produto.nome}}</td>
+            <td>{{Produto.preco}}</td>
+            <td>{{Produto.identificacao}}</td>
+            <td>
+
+                <a href="{% url 'atualizar-Produto'Produto.pk %}" class="btn btn-warning-btn sm" title="Editar">E</a>
+                <a href="{% url 'deletar-Produto' Produto.pk %}" class="btn btn-danger-btn sm" title="Excluir">x</a>
+
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Nenhum produto cadastrado!</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

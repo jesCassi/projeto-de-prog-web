@@ -5,20 +5,20 @@
 
 
 {% block conteudo%}
-<h3>Cadastro</h3>
+<h3>Autenticação</h3>
 
-<p class="lead">
+<!--<p class="lead">
     Preencha tudos os campos obrigatórios.
-</p>
+</p>-->
 
 
-<form action= ""method="POST">
+<form action="" method="POST">
     {% csrf_token %}
 
     {{ form.as_p }}
 
     <button type="submit" class="btn btn-success mt-3">
-        Cadastrar
+        Entrar
     </button>
 </form>
 {% endblock %}

@@ -1,12 +1,16 @@
 {% extends 'paginas/modelo.html'%}
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block conteudo%}
 
-<form method="post">
+<form action="" method="POST">
     {% csrf_token %}
+
+    {{ form.as_p }}
     
-    <p>Tem certeza que deseja excluir o registro "{{ object }}"?</p>
+    <p>Tem certeza que deseja excluir o registro<strong>"{{ object }}"?</strong></p>
     
     <input type="submit" class="btn btn-danger" value="Sim, excluir.">
 </form>

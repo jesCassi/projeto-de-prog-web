@@ -2,6 +2,9 @@
 {% load static %}
 
 {% block conteudo%}
+<h3>Lista de Usuarios cadastrados</h3>
+<a href="{% url 'cadastrar-Usuario'%}" class="btn btn-primary btn-sm">Adicionar Usuario</a>
+<div class="table-responsive">
 
 <table class="table table-striped">
     <tr>
@@ -12,17 +15,22 @@
     </tr>
     {% for estado in object_list %}
     <tr>
-        <td>{{usuario.id}}</td>
         <td>{{usuario.nome}}</td>
         <td>{{usuario.nascimento}}</td>
+        <td>{{usuario.email}}</td>
         <td>
-            editar excluir
+            
+            <a href="{% url 'atualizar-Usuario'Usuario.pk %}"class="btn btn-warning-btn sm"title="Editar">E</a>
+            <a href="{% url 'deletar-Usuario' Usuario.pk %}"class="btn btn-danger-btn sm" title="Excluir">x</a>
+
         </td>
     </tr>
     {% empty %}
     <tr>
         <td colspan="3">Nenhum usuario cadastrado!</td>
     </tr>
+    
     {% endfor %}
 </table>
+</div>
 {% endblock %}
