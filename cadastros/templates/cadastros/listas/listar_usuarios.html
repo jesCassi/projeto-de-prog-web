@@ -13,15 +13,15 @@
         <th>Nascimento</th>
         <th>Opções</th>
     </tr>
-    {% for estado in object_list %}
+    {% for usuario in object_list %}
     <tr>
         <td>{{usuario.nome}}</td>
         <td>{{usuario.nascimento}}</td>
         <td>{{usuario.email}}</td>
         <td>
             
-            <a href="{% url 'atualizar-Usuario'Usuario.pk %}"class="btn btn-warning-btn sm"title="Editar">E</a>
-            <a href="{% url 'deletar-Usuario' Usuario.pk %}"class="btn btn-danger-btn sm" title="Excluir">x</a>
+            <a href="{% url 'atualizar-Usuario' usuario.pk %}"class="btn btn-warning-btn sm"title="Editar">E</a>
+            <a href="{% url 'deletar-Usuario' usuario.pk %}"class="btn btn-danger-btn sm" title="Excluir">x</a>
 
         </td>
     </tr>

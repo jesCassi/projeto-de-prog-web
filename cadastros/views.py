@@ -14,14 +14,14 @@ class UsuarioCreate(CreateView):
     model = Usuario
     fields = ['nome', 'nascimento','email']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-usuarios')
+    success_url = reverse_lazy('listar-Usuarios')
 
 
 class ProdutoCreate(CreateView):
     model = Produto
     fields = ['nome', 'preco', 'identificacao']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-produtos')
+    success_url = reverse_lazy('listar-Produtos')
 
 
 
@@ -35,7 +35,7 @@ class UsuarioUpdate(LoginRequiredMixin,UpdateView):
     model= Usuario
     fields = ['nome', 'nascimento', 'email']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-usuarios')
+    success_url = reverse_lazy('listar-Usuarios')
 
 
 class ProdutoUpdate(LoginRequiredMixin,UpdateView):
@@ -43,7 +43,7 @@ class ProdutoUpdate(LoginRequiredMixin,UpdateView):
     model = Produto
     fields = ['nome', 'preco', 'identificacao']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-produtos')
+    success_url = reverse_lazy('listar-Produtos')
 
 
 
@@ -54,14 +54,14 @@ class UsuarioDelete(LoginRequiredMixin,DeleteView):
     login_url = reverse_lazy('login')
     model = Usuario
     template_name = 'cadastros/form-excluir.html'
-    success_url = reverse_lazy('listar-usuarios')
+    success_url = reverse_lazy('listar-Usuarios')
 
 
 class ProdutoDelete(LoginRequiredMixin, DeleteView):
     login_url = reverse_lazy('login')
     model = Produto
     template_name = 'cadastros/form-excluir.html'
-    success_url = reverse_lazy('listar-produtos')
+    success_url = reverse_lazy('listar-Produtos')
 
 
 
@@ -74,7 +74,7 @@ class UsuarioList(LoginRequiredMixin,ListView):
     template_name = 'cadastros/listas/listar_usuarios.html'
 
 
-class UsuarioList(LoginRequiredMixin, ListView):
+class ProdutoList(LoginRequiredMixin, ListView):
     login_url = reverse_lazy('login')
     model = Produto
     template_name = 'cadastros/listas/listar_produtos.html'

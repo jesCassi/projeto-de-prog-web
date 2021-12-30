@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import IndexView, UsuarioCreate, ProdutoCreate
+from .views import  UsuarioCreate, ProdutoCreate
 from .views import UsuarioUpdate, ProdutoUpdate
 from .views import UsuarioDelete, ProdutoDelete
 from .views import UsuarioList, ProdutoList
@@ -9,7 +9,7 @@ from .views import UsuarioList, ProdutoList
 
 
 urlpatterns = [
-    path('', IndexView.as_view(), name="index"),
+    
     path('cadastrar/Usuario/', UsuarioCreate.as_view(), name="cadastrar-Usuario"),
     path('cadastrar/Produto/', ProdutoCreate.as_view(), name="cadastrar-Produto"),
     
@@ -26,8 +26,8 @@ urlpatterns = [
 
 
 
-    path('listar/usuarios/', UsuarioList.as_view(), name="listar-usuarios"),
-    path('listar/Produto/', ProdutoList.as_view(), name="listar-Produto"),
+    path('listar/Usuarios/', UsuarioList.as_view(), name="listar-Usuarios"),
+    path('listar/Produto/', ProdutoList.as_view(), name="listar-Produtos"),
 
 
 

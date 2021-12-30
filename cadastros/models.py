@@ -16,11 +16,12 @@ class Usuario(models.Model):
 
 class Produto(models.Model):
     nome=models.CharField(max_length=50)
-    preco=models.DecimalField(max_digits=30)
-    identicacao=models.IntegerField(verbose_name="identificação")
+    preco=models.DecimalField(max_digits=8, decimal_places=2)
+    identificacao=models.IntegerField(verbose_name="identificação")
 
     def __str__(self):
-        return self.nome + "/" + self.preco
+        return '{} ({})'.format(self.nome, self.preco)
+
 
 
 

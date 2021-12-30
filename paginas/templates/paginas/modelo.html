@@ -14,7 +14,7 @@
     {% endblock %}
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.css %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
         
     
     <style>
@@ -56,7 +56,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'index'%}">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+
                         </li>
                         
                         
@@ -70,11 +71,11 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 
                                 
-                                <a class="dropdown-item" href="{% url 'cadastrar usuario'%}">
+                                <a class="dropdown-item" href="{% url 'cadastrar-Usuario' %}">
                                   <i class="fa fa-building-o"arian-hidden="true"></i>
                                   Usuario
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{% url 'cadastrar-Produto' %}">
                                     <i class="fa fa-building-o" arian-hidden="true"></i>
                                     Produto
                                 
@@ -87,7 +88,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'sobre'%}">Sobre</a>
+                            <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
                         </li>
                         
                     </ul>
@@ -105,14 +106,14 @@
                             <a class="dropdown-item" href="#">
                                 <i class="fa fa-user" aria-hidden="true"> </i>
                                 Meus dados </a>
-                            <a class="dropdown-item" href="{% url 'alterar-senha'%}">
+                            <a class="dropdown-item" href="{% url 'alterar-senha' %}">
                                 <i class="fa fa-user" aria-hidden="true"> </i>
                                 Alterar senha </a>
-                            <a class="dropdown-item" href="{% url 'login'%}">
+                            <a class="dropdown-item" href="{% url 'login' %}">
                                 <i class="fa fa-user" aria-hidden="true"> </i>
                                 Entrar </a>
                             
-                            <a class="dropdown-item" href="{% url 'logout'%}">
+                            <a class="dropdown-item" href="{% url 'logout' %}">
                                 <i class="fa fa-user" aria-hidden="true"> </i>
                                 Sair </a>
                             
@@ -156,8 +157,8 @@
         </div>
     </footer>
 
-    <script src="{% static 'javascrip/jquery-3.6.0.js'}"></script>
-    <script src="{% static 'javascrip/bootstrap.js'}"></script>
+    <script src="{% static 'js/jquery-3.6.0.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
 
 
 </body>
